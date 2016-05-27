@@ -15,6 +15,6 @@ namespace RamiGranat_MVC_2016_05.Models
         [Required]
         public string Name { get; set; }
         public string Address { get; set; }
-        public Product Products { get; set; }
+        public List<Product> Products { get; set; }
     }
 }
