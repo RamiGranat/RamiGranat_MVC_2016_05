@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RamiGranat_MVC_2016_05.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,10 @@ namespace RamiGranat_MVC_2016_05
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            using (var ctx = new StoreContext())
+            {
+                ctx.SaveChanges();
+            }
         }
     }
 }

@@ -18,6 +18,16 @@ namespace RamiGranat_MVC_2016_05
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "Hexa",
+                url: "{SpriteController}/{Hexa}/{id}",
+                defaults: new { controller = "SpriteController", action = "Hexa", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Octa",
+                url: "{SpriteController}/{Octa}/{id}",
+                defaults: new { controller = "SpriteController", action = "Octa", id = UrlParameter.Optional }
+            );
         }
     }
 }
